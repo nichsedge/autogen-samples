@@ -1,0 +1,17 @@
+[project]
+name = "autogen-demo"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.12.14",
+    "autogen-agentchat>=0.5.7",
+    "autogen-ext[mcp,ollama,openai]>=0.5.7",
+    "autogenstudio>=0.4.2.2",
+    "dotenv>=0.9.9",
+    "pyautogen>=0.9",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.0",
+]
