@@ -38,9 +38,14 @@ async def main() -> None:
             workbench=workbench,
             reflect_on_tool_use=True,
         )
-        await Console(
-            assistant.run_stream(task="get ksei portfolio summary and roast that portfolio")
-        )
+        # await Console(
+        #     assistant.run_stream(task="get ksei portfolio summary and roast that portfolio")
+        # )
+
+        config = assistant.dump_component()
+        print(config.model_dump_json())
 
 
 asyncio.run(main())
+
+
